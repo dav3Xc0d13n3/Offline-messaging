@@ -1,0 +1,7 @@
+{
+  "name": "MeshChat",
+  "description": "An offline P2P and mesh networking messaging application",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
+
