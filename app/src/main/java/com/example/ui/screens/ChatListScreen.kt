@@ -8,6 +8,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.*
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -70,7 +71,7 @@ fun ChatListScreen(
                 containerColor = MaterialTheme.colorScheme.primary,
                 contentColor = MaterialTheme.colorScheme.onPrimary
             ) {
-                Icon(Icons.Default.Chat, contentDescription = "New Chat")
+                Icon(Icons.AutoMirrored.Filled.Chat, contentDescription = "New Chat")
             }
         }
     ) { padding ->
@@ -125,7 +126,7 @@ fun ChatListScreen(
             ) {
                 items(filteredThreads) { thread ->
                     ChatThreadItem(thread = thread, onClick = { onChatClick(thread.id) })
-                    Divider(color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f), thickness = 0.5.dp)
+                    HorizontalDivider(color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f), thickness = 0.5.dp)
                 }
             }
         }
